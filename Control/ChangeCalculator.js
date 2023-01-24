@@ -24,8 +24,7 @@ const calculateChange = (input) => {
     return change
 }
 
-console.log(calculateChange(16.9))
+// console.log(calculateChange(16.9))
 
-
-export default ChangeCalculator
+export {calculateChange}
 

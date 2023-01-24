@@ -10,10 +10,28 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(238, 222, 222);
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.form{
+  background-color: rgb(226, 197, 197);
+  padding: 4rem;
+  color: black;
+
+}
+.amount, .name {
+  display: block;
+  padding-top: 2rem;
+}
+
+.btn{
+  margin-top: 2rem;
+  background-color: blue;
+  padding: 0.5rem 2rem;
+  color: white;
+  border: 50%
+}

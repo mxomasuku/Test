@@ -1,16 +1,18 @@
 var express = require('express')
 var cors = require('cors')
 var app = express()
- 
-app.options('/products/:id', cors()) // enable pre-flight request for DELETE request
-app.delete('/products/:id', cors(), function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for all origins!'})
-})
- 
-app.get("/api", (req, res) =>{
-    res.json({ "users": [{userName: "Mxolisi", amount: 50 
-}, {userName: "Manatsa", amount: 50 
-}] })
+const fs = require('fs/promises')
+const {v4: uuid} = require('uuid')
+
+ // ! Buggy logic 
+app.post('/api/post', cors(), (req, res) => {
+ const id = uuid()
+ console.log(id)
+ res.sendStatus(201)
 })
 
-app.listen(5000, () => {console.log('Server started on port 5000')})
+app.get("/api", (req, res) =>{
+    res.json({"changeObject": ["Lorem", "3 x R20, 1 X R10"]})
+})
+
+app.listen(5000, () => {console.log('Server started on port 5000 (localhost:5000)')})
